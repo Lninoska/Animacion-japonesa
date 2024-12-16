@@ -82,8 +82,8 @@ http.createServer(async (req, res) => {
     }
     if (req.method == 'DELETE') {
         try {
-            const autosOriginales = await fs.readFile(archivoAnime, 'utf-8');
-            const objetoArchivoOriginal = JSON.parse(autosOriginales);
+            const AnimeOriginales = await fs.readFile(archivoAnime, 'utf-8');
+            const objetoArchivoOriginal = JSON.parse(AnimeOriginales);
             const id = params.get('id');
             if (objetoArchivoOriginal[id]) {
                 delete objetoArchivoOriginal[id];
